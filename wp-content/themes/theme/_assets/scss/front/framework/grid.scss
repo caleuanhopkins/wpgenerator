@@ -1,0 +1,321 @@
+/**
+--{ GRID.CSS }--
+=============================================================
+
+	GRID.CSS - Fluid percentage CSS framework.
+
+*/
+
+
+/**
+--{ GRID VARIABLES }--
+=============================================================
+*/
+
+$max-width: 1440;
+$columns: 16;
+
+/**
+--{ GRID SETUP }--
+=============================================================
+*/
+
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.container{
+	max-width:#{$max-width+"px"};
+	width:100%;
+	box-sizing:border-box;
+	margin:0 auto;
+	display: block
+}
+
+.col{
+	margin:0 1.04%;
+	float:left;
+}
+
+.leftpull{
+	float:left;
+}
+
+.pushright{
+	float:right;
+}
+
+.row{
+	clear:both;
+}
+
+.centered{
+	margin: 0 auto;
+	float:none;
+	text-align: center;
+}
+
+.container {
+
+	.one{ 
+		width:4.16%; 
+		max-width:4.16%; 
+	}
+	.two{ 
+		width:10.41%; 
+		max-width:10.41%; 
+	}
+	.three{ 
+		width:16.66%; 
+		max-width:16.66%; 
+	}
+	.four, .quarter{ 
+		width:22.91%; 
+		max-width:22.91%; 
+	}
+	.five{ 
+		width:29.16%; 
+		max-width:29.16%; 
+	}
+	.six{ 
+		width:35.41%; 
+		max-width:35.41%; 
+	}
+	.seven{ 
+		width:41.66%;
+		max-width:41.66%;
+	}
+	.eight, .half{ 
+		width:47.91%; 
+		max-width:47.91%; 
+	}
+	.nine{ 
+		width:54.16%; 
+		max-width:54.16%; 
+	}
+	.ten{ 
+		width:60.41%; 
+		max-width:60.41%; 
+	}
+	.eleven{ 
+		width:66.66%; 
+		max-width:66.66%; 
+	}
+	.twelve, .threequarters{ 
+		width:72.91%; 
+		max-width:72.91%; 
+	}
+	.thirteen{ 
+		width:79.16%; 
+		max-width:79.16%; 
+	}
+	.fourteen{ 
+		width:85.41%; 
+		max-width:85.41%; 
+	}
+	.fifteen{ 
+		width:91.66%; 
+		max-width:91.66%; 
+	}
+	.sixteen, .whole{ 
+		width:97.91%;
+		max-width:97.91%;
+	}
+
+	.third{ 
+		width:31.25%;
+		max-width:31.25%;
+	}
+	.twothirds{ 
+		width:64.58%;
+		max-width:64.58%;
+	}
+
+	.fifth{ 
+		width:17.90%; 
+		max-width:17.90%; 
+	}
+	.twofifths{ 
+		width:37.88%; 
+		max-width:37.88%; 
+	}
+	.threefifths{ 
+		width: 57.86%; 
+		max-width: 57.86%; 
+	}
+	.fourfifths{ 
+		width: 77.85%; 
+		max-width: 77.85%; 
+	}
+
+	.sixth{ 
+		width:14.57%; 
+		max-width:14.57%; 
+	}
+	.twosixths{ 
+		width:31.22%; 
+		max-width:31.22%; 
+	}
+	.threesixths{ 
+		width:47.87%; 
+		max-width:47.87%; 
+	}
+	.foursixths{ 
+		width:64.52%; 
+		max-width:64.52%; 
+	}
+	.fivesixths{ 
+		width:81.18%; 
+		max-width:81.18%; 
+	}
+
+	.gapless.one{ 
+		width:6.25%; 
+		max-width:6.25%; 
+	}
+	.gapless.two{ 
+		width:12.5%; 
+		max-width:12.5%; 
+	}
+	.gapless.three{ 
+		width:18.75%; 
+		max-width:18.75%; 
+	}
+	.gapless.four, .gapless.quarter{ 
+		width:25%; 
+		max-width:25%; 
+	}
+	.gapless.five{ 
+		width:31.25%; 
+		max-width:31.25%; 
+	}
+	.gapless.six{ 
+		width:37.5%; 
+		max-width:37.5%; 
+	}
+	.gapless.seven{ 
+		width:43.75%;
+		max-width:43.75%;
+	}
+	.gapless.eight, .gapless.half{ 
+		width:50%; 
+		max-width:50%; 
+	}
+	.gapless.nine{ 
+		width:56.25%; 
+		max-width:56.25%; 
+	}
+	.gapless.ten{ 
+		width:62.5%; 
+		max-width:62.5%; 
+	}
+	.gapless.eleven{ 
+		width:68.75%; 
+		max-width:68.75%; 
+	}
+	.gapless.twelve, .gapless.threequarters{ 
+		width:75%; 
+		max-width:75%; 
+	}
+	.gapless.thirteen{ 
+		width:81.25%; 
+		max-width:81.25%; 
+	}
+	.gapless.fourteen{ 
+		width:87.5%; 
+		max-width:87.5%; 
+	}
+	.gapless.fifteen{ 
+		width:93.75%; 
+		max-width:93.75%; 
+	}
+	.gapless.sixteen, .gapless.whole{ 
+		width:100%;
+		max-width:100%;
+	}
+
+	.gapless.third{ 
+		width:33.33%;
+		max-width:33.33%;
+	}
+	.gapless.twothirds{ 
+		width:66.66%;
+		max-width:66.66%;
+	}
+
+	.gapless.fifth{ 
+		width:20%; 
+		max-width:20%; 
+	}
+	.gapless.twofifths{ 
+		width:40%; 
+		max-width:40%; 
+	}
+	.gapless.threefifths{ 
+		width: 60%; 
+		max-width: 60%; 
+	}
+	.gapless.fourfifths{ 
+		width: 80%; 
+		max-width: 80%; 
+	}
+
+	.gapless.sixth{ 
+		width:16.66%; 
+		max-width:16.66%; 
+	}
+	.gapless.twosixths{ 
+		width:33.33%; 
+		max-width:33.33%; 
+	}
+	.gapless.threesixths{ 
+		width:50%; 
+		max-width:50%; 
+	}
+	.gapless.foursixths{ 
+		width:66.66%; 
+		max-width:66.66%; 
+	}
+	.gapless.fivesixths{ 
+		width:83.34%; 
+		max-width:83.34%; 
+	}
+}
+
+@media only screen and (max-width:  700px) {
+
+	.container{ float:none;clear:both;}
+
+	.left, .pushright{ float:none; margin:0 auto; text-align:center;}
+
+	.container{
+
+		.one, .two, .three, .four, .quarter, .five, .six, .seven, .eight, .half, .nine, .ten, .eleven, .twelve, .threequarters, .thirteen, .fourteen, .fifteen, .sixteen, .whole, .third, .twothirds, .fifth, .twofifths, .threefifths, .fourfifths, .sixth, .twosixths, .threesixths, .foursixths, .fivesixths{ 
+			width:97.91%; 
+			max-width:97.91%;
+			float:none; 
+			clear:both; 
+			display: block; 
+		}
+		
+		.gapless.one, .gapless.two, .gapless.three, .gapless.four, .gapless.quarter, .gapless.five, .gapless.six, .gapless.seven, .gapless.eight, .gapless.half, .gapless.nine, .gapless.ten, .gapless.eleven, .gapless.twelve, .gapless.threequarters, .gapless.thirteen, .gapless.fourteen, .gapless.fifteen, .gapless.sixteen, .gapless.whole, .gapless.third, .gapless.twothirds, .gapless.fifth, .gapless.twofifths, .gapless.threefifths, .gapless.fourfifths, .gapless.sixth, .gapless.twosixths, .gapless.threesixths, .gapless.foursixths, .gapless.fivesixths{ 
+			width:100%; 
+			max-width:100%; 
+			float:none; 
+			clear:both; 
+			display: block;
+		}
+	}
+}
+
+.clearing:after, .container:after{
+	clear:both;
+	content:'&nbsp;';
+	height:1px;
+	width:1px;
+	visibility:hidden;
+	display:block;
+	font-size:0;
+}
