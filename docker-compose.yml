@@ -6,10 +6,10 @@ services:
      volumes:
        - db_data:/var/lib/mysql
      environment:
-       MYSQL_ROOT_PASSWORD: pulse
-       MYSQL_DATABASE: pulse
-       MYSQL_USER: pulse
-       MYSQL_PASSWORD: pulse
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: root
+       MYSQL_USER: root
+       MYSQL_PASSWORD: root
 
     wordpress:
      depends_on:
@@ -20,7 +20,7 @@ services:
        - "443:443"
      environment:
        WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_PASSWORD: pulse
+       WORDPRESS_DB_PASSWORD: root
      working_dir: /var/www/html
      volumes:
        - ./wp-content:/var/www/html/wp-content
